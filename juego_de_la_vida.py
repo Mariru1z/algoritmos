@@ -12,17 +12,18 @@ ROWS, COLS = HEIGHT // CELL_SIZE, WIDTH // CELL_SIZE
 # Colores
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
-
+#crea y devuelve una matriz NumPy de ceros del tamaño de la cuadricula
 def create_grid():
     return np.zeros((ROWS, COLS))
-
+#dibuja la cuadricula. recorre cada celula en la cuadricula, dibuja un rectangulo negro
+#en las posiciones donde la celulaesta viva
 def draw_grid(surface, grid):
     surface.fill(WHITE)
     for y in range(ROWS):
         for x in range(COLS):
             if grid[y, x] == 1:
                 pygame.draw.rect(surface, BLACK, (x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE))
-
+#actializa el estado de la cuadricula.
 def update_grid(grid):
     new_grid = grid.copy()
     for y in range(ROWS):
@@ -35,7 +36,7 @@ def update_grid(grid):
                 if neighbors == 3:
                     new_grid[y, x] = 1  # Nace por reproducción
     return new_grid
-
+#cuanta el numero de vecinos de una celula en la cuadricula
 def count_neighbors(grid, x, y):
     count = 0
     for i in range(-1, 2):
@@ -45,7 +46,7 @@ def count_neighbors(grid, x, y):
             if (0 <= x + i < COLS) and (0 <= y + j < ROWS):
                 count += grid[y + j, x + i]
     return count
-
+#inicia el pygame, crea la ventana, define el bucle principal
 def main():
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))

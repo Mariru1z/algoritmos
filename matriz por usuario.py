@@ -1,17 +1,17 @@
-# Get matrix dimensions from user
-numero_filas = int(input("Enter number of rows: "))
-nemro_columnas = int(input("Enter the of columns: "))
-# Initialize the matrix
+# proporcionar las dimensiones
+numero_filas = int(input("numero de filas: "))
+nemro_columnas = int(input("numero de columnas: "))
+# Inicia la matriz
 matrix = []
 
-# Fill the matrix with user input
+# matriz dada por el usuario
 for i in range(numero_filas):
     row = []
     for j in range(nemro_columnas):
-        value = int(input(f"Enter value for row {i+1}, column {j+1}: "))
+        value = int(input(f"valor de la fila {i+1}, valor de la columna {j+1}: "))
         row.append(value)
     matrix.append(row)
 
-# Print the matrix
+# matriz3
 for row in matrix:
     print(row)

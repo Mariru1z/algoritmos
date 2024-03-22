@@ -102,20 +102,3 @@ while True:
 
     # Update basic and non-basic variables
     basic[pivot_row], non_basic[pivot_col] = non_basic[pivot_col], basic[pivot_row]
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

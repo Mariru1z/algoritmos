@@ -1,17 +1,8 @@
 import numpy as np
 
-
-#Para facilitar la resolución emplearemos la librería NumPy
-"""
-NumPy
-Es una biblioteca para el lenguaje de programación Python que da soporte
-para crear vectores y matrices grandes multidimensionales, junto con una
-gran colección de funciones matemáticas de alto nivel para operar con ellas.
-"""
-
 def metodo_simplex(A, b, c):
     """
-    Implementa el método simplex para resolver problemas de maximización.
+    método simplex para resolver problemas de maximización.
 
     Parámetros:
     - A: matriz de coeficientes de las restricciones.
@@ -82,10 +73,3 @@ print(10*"------")
 print("Solución óptima:", solucion)
 print("Valor de la función objetivo:", valor)
 print(10*"------")
-
-
-"""
-Elementos de Programación Lineal 
-Maximización 
-Taha Hamdy 
-"""
