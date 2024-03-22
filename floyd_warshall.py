@@ -25,10 +25,11 @@ def floyd_warshall(graph):
 
 # Ejemplo de uso con valores infinitos
 graph = [
-    [0, 3, float('inf'), 7],
-    [8, 0, 2, float('inf')],
-    [5, float('inf'), 0, 1],
-    [2, float('inf'), float('inf'), 0]
+    [0, 9, float('inf'), 5, float('inf')],
+    [9,0,5, float('inf'),8],
+    [float('inf'),5,0,5,7],
+    [5,float('inf'),5,0,7],
+    [float('inf'),8,7,7,0]
 ]
 
 result = floyd_warshall(graph)
@@ -36,3 +37,4 @@ result = floyd_warshall(graph)
 # Imprimir la matriz de distancias
 for row in result:
     print(row)
+
